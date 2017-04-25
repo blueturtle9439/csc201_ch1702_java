@@ -11,12 +11,11 @@ public class ch1702 {
 
         try {
 
-            BufferedWriter fw = new BufferedWriter(new FileWriter(fileName, true));
+            FileOutputStream fw = new FileOutputStream(fileName, true);
             fw.write(txt);
-            fw.flush();
-            fw.close();
+          
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
